@@ -5,7 +5,7 @@ const naturalNotes = ["C", "D", "E", "F", "G", "A", "B"];
 const sharpNotes = ["C", "D", "F", "G", "A"]; // Notes that have sharps
 const flatNotes = ["D", "E", "G", "A", "B"]; // Notes that have flats
 
-const range = ["C4", "A5"];
+const range = ["C3", "C5"];
 const synth = new Tone.Synth().toDestination();
 
 const piano = document.querySelector("#piano");
@@ -134,7 +134,6 @@ const app = {
         synth.triggerAttackRelease(noteName, "8n");
     },
 };
-
 const utils = {
     createSVGElement(tag) {
         return document.createElementNS("http://www.w3.org/2000/svg", tag);
@@ -150,17 +149,8 @@ const utils = {
     },
 };
 
+// Set up the piano
 app.setupPiano();
-
-
-
-
-
-
-
-
-
-
 
 
 

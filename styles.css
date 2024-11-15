@@ -29,11 +29,3 @@
     pointer-events:none;
     user-select: none;
 }
-
-.show{
-    fill: #f5f541;
-}
-
-.show.black-key ~ text{
-    fill : #0000;
-} 
