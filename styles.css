@@ -1,11 +1,13 @@
 *{
     margin: 0;
     padding: 0;
-
 }
-
+#piano{
+    clip-path: inset(15px 0px 0px 0px);
+    margin-top: -15px;
+}
 .white-key{
-    stroke:#555555;
+    stroke:#3e3e3e;
     fill: #FFFFF7;
 }
 
@@ -13,3 +15,25 @@
     stroke: #979797;
     fill: #4b4b4b;
 }
+
+.white-key-text{
+    font-size:13px;
+    pointer-events:none;
+    user-select: none;
+}
+
+.black-key-text{
+    font-size: 13px;
+    fill: #fff;
+    font-weight: 200;
+    pointer-events:none;
+    user-select: none;
+}
+
+.show{
+    fill: #f5f541;
+}
+
+.show.black-key ~ text{
+    fill : #0000;
+} 
