@@ -1,31 +1,67 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-#piano{
-    clip-path: inset(15px 0px 0px 0px);
-    margin-top: -15px;
-}
-.white-key{
-    stroke:#3e3e3e;
-    fill: #FFFFF7;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-.black-key{
-    stroke: #979797;
-    fill: #4b4b4b;
+body {
+  background: #f0f4f8;
 }
 
-.white-key-text{
-    font-size:13px;
-    pointer-events:none;
-    user-select: none;
+#piano {
+  clip-path: inset(15px 0px 0px 0px);
+  margin-top: -15px;
 }
 
-.black-key-text{
-    font-size: 13px;
-    fill: #fff;
-    font-weight: 200;
-    pointer-events:none;
-    user-select: none;
+.white-key {
+  stroke: #d0d0d0;
+  fill: #fbfbf5;
+  transition: fill 0.2s ease, filter 0.2s ease;
+}
+.piano-header {
+  height: 60px;
+  width: 100%;
+  background-color: #1f1f1f; /* same as black key fill */
+}
+
+
+.white-key:hover {
+  fill: #f1f1e6;
+  filter: brightness(0.95);
+}
+
+/* Black Keys */
+.black-key {
+  stroke: #333;
+  fill: #1f1f1f;
+  transition: fill 0.2s ease, filter 0.2s ease;
+}
+
+.black-key:hover {
+  fill: #333;
+  filter: brightness(1.1);
+}
+
+/* Text for White Keys */
+.white-key-text {
+  font-size: 13px;
+  fill: #333;
+  font-weight: 500;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Text for Black Keys */
+.black-key-text {
+  font-size: 12px;
+  fill: #f5f5f5;
+  font-weight: 400;
+  pointer-events: none;
+  user-select: none;
+}
+.key:active {
+  filter: brightness(1.2);
+  transform: translateY(2px);
+  transition: transform 0.1s ease;
 }
